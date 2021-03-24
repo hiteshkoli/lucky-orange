@@ -1,0 +1,5 @@
+name: Lucky Orange
+type: module
+description: Adds the required tracking code to the site pages with no coding required.
+core: 8.x
+package: Custom

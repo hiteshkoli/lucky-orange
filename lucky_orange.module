@@ -1,0 +1,32 @@
+<?php
+
+/**
+ * @file
+ * This module adds the Lucky functionality required for this site.
+ */
+
+/**
+ * Implements hook_page_attachments().
+ * @param array $attachments
+ */
+function lucky_orange_page_attachments(array &$attachments) {
+
+  $site_id = \Drupal::config('lucky_orange.luckyorangesettings')->get('lucky_orange_site_id_config');
+
+  if(!empty($site_id)) {
+
+    $attachments['#attached']['html_head'][] = [
+      [
+        '#tag' => 'script',
+        '#value' => 'window.__lo_site_id ='.$site_id,
+        '#weight' => 0,
+      ],
+      // A key, to make it possible to recognize this HTML <HEAD> element when altering.
+      'LuckyOrange'
+    ];
+
+    $attachments['#attached']['library'][] = 'lucky_orange/lucky_orange_library';
+
+  }
+
+}

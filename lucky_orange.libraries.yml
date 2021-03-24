@@ -1,0 +1,4 @@
+lucky_orange_library:
+  version: 1.0
+  js:
+    js/lucky_orange.js: { scope: footer }

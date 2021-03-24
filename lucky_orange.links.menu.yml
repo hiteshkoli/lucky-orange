@@ -1,0 +1,6 @@
+lucky_orange.admin_settings_form:
+  title: 'Lucky Orange configuration'
+  route_name: lucky_orange.admin_settings_form
+  description: 'Lucky Orange admin'
+  parent: system.admin_config_system
+  weight: 99
